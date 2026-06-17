@@ -31,6 +31,7 @@ class TaskDeleteView(generic.DeleteView):
 
 class TagListView(generic.ListView):
     model = Tag
+    ordering = ["name"]
     paginate_by = 5
 
 

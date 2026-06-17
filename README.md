@@ -47,3 +47,25 @@ The site will be available at http://127.0.0.1:8000/.
 
 - `/` — home page with the todo list.
 - `/tags/` — list of tags.
+
+## Screenshots
+
+### Home (todo list)
+
+![Home page](screenshots/home.png)
+
+### Tags list
+
+![Tags list](screenshots/tags.png)
+
+### Task form
+
+![Task form](screenshots/task_form.png)
+
+### Tag form
+
+![Tag form](screenshots/tag_form.png)
+
+### Delete confirmation
+
+![Delete confirmation](screenshots/task_delete.png)
