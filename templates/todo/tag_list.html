@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Tags List</h1>
+    <a href="{% url 'todo:tag-create' %}" class="btn btn-primary">
+      Add
+    </a>
+  </div>
+
+  {% if tag_list %}
+    <table class="table table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Name</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for tag in tag_list %}
+          <tr>
+            <td>{{ tag.name }}</td>
+            <td class="text-end">
+              <a href="{% url 'todo:tag-update' pk=tag.id %}"
+                 class="btn btn-sm btn-outline-primary">
+                Update
+              </a>
+              <a href="{% url 'todo:tag-delete' pk=tag.id %}"
+                 class="btn btn-sm btn-outline-danger">
+                Delete
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>There are no tags in the service.</p>
+  {% endif %}
+{% endblock %}
